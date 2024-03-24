@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+    <style>
+      .main-page {
+        text-align: center;
+      }
+      .students-list {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-page">
+      <h2>Students:</h2>
+      <div class="students-list">
+        <% students.map(student => { %> <%= student.name %> <%= student.surname
+        %> - Age: <%= student.age %>
+        <br />
+        <% }) %>
+      </div>
+      <button onclick="location.href='/add-student';">Add Student</button>
+    </div>
+  </body>
+</html>
